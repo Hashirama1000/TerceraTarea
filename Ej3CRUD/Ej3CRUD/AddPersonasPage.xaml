@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ej3CRUD.AddPersonasPage" Title="Ingrese los Datos">
+    <ContentPage.Content>
+
+        <StackLayout Padding="5">
+            <Label Text="Nombre" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Nombre" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="txtNombre"/>
+            <Label Text="Apellido" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Apellido" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="txtApellido"/>
+            <Label Text="Edad" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Edad" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="txtEdad" Keyboard="Numeric"/>
+            <Label Text="Correo Electronico" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Correo" FontSize="Small" HorizontalOptions="FillAndExpand" Keyboard="Email" x:Name="txtCorreo"/>
+            <Label Text="Direccion" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Placeholder="Direccion" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="txtDireccion"/>
+         
+
+
+            <Button Text="Guardar" Clicked="saveBtn_Clicked"  HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="White" x:Name="saveBtn"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

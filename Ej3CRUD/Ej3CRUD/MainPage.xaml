@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:Ej3CRUD"
+             x:Class="Ej3CRUD.MainPage" Title="Añadir Persona">
+
+
+    <StackLayout Padding="5">
+        <Button Text="Añadir Persona" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" TextColor="Black" Clicked="AddPersonas"/>
+        <Label Text="Para Eliminar a la persona Mantenga Presionado Sobre Ella "></Label>
+        <Label Text=""></Label>
+        <ListView x:Name="PersonasList" HasUnevenRows="True" ItemTapped="EditPersonas">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="DeletePersonas" IsDestructive="true" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Spacing="2">
+                            <Label Text="{Binding Nombre,StringFormat='Nombre:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text="{Binding Apellido,StringFormat='Apellido:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text="{Binding Edad,StringFormat='Edad:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text="{Binding Correo,StringFormat='Correo:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text="{Binding Dirreccion,StringFormat='Dirreccion{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                            <Label Text=""></Label>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
